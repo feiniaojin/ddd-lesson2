@@ -43,6 +43,7 @@ public class PlayerOpeService {
                 playerOpe.setLastCpPlayerId(cpPlayerId);
             } else {
                 //组过CP的话，需要这次新CP的玩家ID跟上次的不一样才会统计
+                //小两口闹矛盾又复合的就别记录进去了
                 if (!cpPlayerId.equals(playerOpe.getLastCpPlayerId())) {
                     playerOpe.setCpCount(playerOpe.getCpCount() + 1);
                     playerOpe.setLastCpPlayerId(cpPlayerId);
